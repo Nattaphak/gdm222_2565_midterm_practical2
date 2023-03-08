@@ -32,15 +32,11 @@ public class ParametricEquationRenderer : MonoBehaviour
 
     void Start()
     {
-        Vector3[] points = new Vector3[4];
-        points[0] = new Vector3(1, 1, 0);
-        points[1] = new Vector3(-1, 1, 0);
-        points[2] = new Vector3(-1, -1, 0);
-        points[3] = new Vector3(1, -1, 0);
-
+        Vector3[] points = new Vector3[step];
+     
         //  Before setting a line renderer positions, the position
         //  count must be set first.
-        lineRenderer.positionCount = 4;
+        lineRenderer.positionCount = step;
 
         //  This statement sets a line renderer positions.
         //  Old positions are overridden.
